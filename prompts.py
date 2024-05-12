@@ -6,7 +6,6 @@ After noting your intuition, develop a flow in natural language that fits the in
 
 Once you have the intuition and the flow, and the thought process behind it, go through the list of image resources provided and pick the ones that best represent the system.
 
-Wjem
 After this summarize everything that you did at the end in the <summary></summary> block.
 
 Image Resources
