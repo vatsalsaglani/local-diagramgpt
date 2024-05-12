@@ -1,0 +1,10 @@
+__pycache__/
+*/__pycache__/
+*/**/__pycache__/
+gvz.py
+*.ipynb
+try.py
+*.png
+static/
+.DS_Store
+model/
