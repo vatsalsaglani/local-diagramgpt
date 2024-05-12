@@ -6,6 +6,12 @@ A local **DiagramGPT** which works on a narrow use case of generating system arc
 
 Please follow the following steps to run this locally on your machine.
 
+### Install Graphviz
+
+Install the Graphviz binrary before to render the generated Python-Graphviz diagrams.
+
+[Follow the steps mentioned in this link.](https://graphviz.org/download/)
+
 ### Clone the Repo
 
 ```sh
