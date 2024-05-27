@@ -139,7 +139,7 @@ Based on the given inputs:
 
 Your task is to generate Python code for a Graphviz diagram that visually represents this architecture. Nodes in the diagram should use the selected resources as images, and edges can include text to describe interactions or relationships if necessary.
 
-Include a code block block with the Python code and a brief explanation of how the diagram reflects the provided inputs. The code block should start with ```python and end with ```.
+Include a code block block with the Python code and a brief explanation of how the diagram reflects the provided inputs. The code block should include default_node_attrs .The code block should start with ```python and end with ```.
 
 The output path will be provided in the Path key.
 
@@ -186,7 +186,7 @@ The output path will be provided in the Path key.
 ```python
 from graphviz import Digraph
 
-_default_node_attrs = {
+default_node_attrs = {
     "shape": "box",
     "style": "rounded",
     "fixedsize": "true",
@@ -208,11 +208,11 @@ dot.attr(splines='ortho')
 dot.node('A',
          'Web Server',
          image='./resources/aws/compute/ec2.png',
-         **_default_node_attrs)
+         **default_node_attrs)
 dot.node('B',
          'Authentication Service',
          image='./resources/aws/security/cognito.png',
-         **_default_node_attrs)
+         **default_node_attrs)
 dot.node('C',
          'Application Server',
          image='./resources/aws/compute/ec2.png',
@@ -220,13 +220,13 @@ dot.node('C',
 dot.node('D',
          'Database',
          image='./resources/aws/database/rds.png',
-         **_default_node_attrs)
+         **default_node_attrs)
 
 dot.edges(['AB', 'AC'])
 dot.edge('B', 'C', xlabel='validates user')
 dot.edge('C', 'D', xlabel='queries')
 
-dot.attr(label=r'\n\nThree-Tier Web Application Architecture Diagram')
+dot.attr(label='Three-Tier Web Application Architecture Diagram')
 dot.attr(fontsize='12')
 
 dot.render("abc", view=False, format="png")```
