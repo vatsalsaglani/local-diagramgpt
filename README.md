@@ -52,7 +52,7 @@ enableStaticServing = true
 ### Start the Streamlit app
 
 ```sh
-streamlit run app.py
+streamlit run streamlit.py
 ```
 
 ## Demo
